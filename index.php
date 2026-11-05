@@ -80,27 +80,16 @@ require_once './order_functions.php';
                     Send to Kitchen 👨‍🍳
                 </button>
             </div>
-        </form>
 
-        <!--Reset button-->
+            <!--Reset button-->
         <div class="form-actions">
             <a href="forget_order.php" class="reset-btn">
                 Forget Order 🧹
             </a>
         </div>
+        </form>
 
-        <!--Pairing Recommendations-->
-        <section class="insight-card" aria-labelledby="guidance-heading">
-            <h3 id="guidance-heading">Live Guidance</h3>
-
-            <p>
-                <?= htmlspecialchars(completionMessage()); ?>
-            </p>
-
-            <p class="insight-note">
-                <?= htmlspecialchars(pairingSuggestion()); ?>
-            </p>
-        </section>
+        
 
         <!--Price estimation-->
         <section class="insight-card pricing-grid" aria-label="Order pricing information">
@@ -124,6 +113,21 @@ require_once './order_functions.php';
             </p>
 
         </section>
+
+        <!--Pairing Recommendations-->
+        <section class="insight-card" aria-labelledby="guidance-heading">
+            <h3 id="guidance-heading">Live Guidance</h3>
+
+            <p>
+                <?= htmlspecialchars(completionMessage()); ?>
+            </p>
+
+            <p class="insight-note">
+                <?= htmlspecialchars(pairingSuggestion()); ?>
+            </p>
+        </section>
+
+        
     </main>
 
 </body>

@@ -21,8 +21,17 @@
     <main>
         <h2>Your Receipt</h2>
 
-        <section class="receipt-card" aria-label="Order summary">
-            <?= $orderSummary; ?>
+        <section class="receipt-card" aria-labelledby="receipt-heading">
+
+            <div class="receipt-heading">
+                <h3 id="receipt-heading">🧾 Order Summary</h3>
+                <p>Your selections, saved for this session.</p>
+            </div>
+
+            <div class="receipt-details">
+                <?= $orderSummary; ?>
+            </div>
+
         </section>
 
         <section class="insight-card" aria-labelledby="feedback-heading">

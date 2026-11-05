@@ -1,0 +1,313 @@
+/* ===== Global Styles ===== */
+
+:root {
+    --background: #FAF7EF;
+    --surface: #FFFFFF;
+    --text: #34251D;
+    --accent: #CE4D2D;
+    --border: #E7D6B6;
+    --muted: #70584A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ===== Page Layout ===== */
+
+header {
+    background-color: var(--surface);
+    border-bottom: 2px solid var(--border);
+    text-align: center;
+    padding: 32px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+header p {
+    color: var(--muted);
+    margin: 8px 0 0;
+    font-size: 1.05rem;
+}
+
+main {
+    width: min(100% - 40px, 1100px);
+    margin: 40px auto;
+}
+
+main > h2 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--text);
+}
+
+/* ===== Form Controls ===== */
+
+form {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group > label,
+.form-group > legend {
+    display: block;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.form-group select {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--surface);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+}
+
+.form-group select:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* ===== Drink Size Radio Buttons ===== */
+
+fieldset.form-group {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 0 0 24px;
+    min-width: 0;
+}
+
+fieldset.form-group legend {
+    padding: 0 8px;
+}
+
+fieldset.form-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 20px 8px 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+fieldset.form-group input[type="radio"] {
+    accent-color: var(--accent);
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+fieldset.form-group input[type="radio"]:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* ===== Action Buttons ===== */
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.submit-btn,
+.return-btn,
+.reset-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+/* Send to Kitchen */
+.submit-btn {
+    background-color: var(--accent);
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #A83D23;
+}
+
+/* Order Again */
+.return-btn {
+    background-color: var(--text);
+    color: white;
+}
+
+.return-btn:hover {
+    background-color: #5B4032;
+}
+
+/* Forget Order */
+.reset-btn {
+    background-color: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.reset-btn:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* Keyboard focus */
+.submit-btn:focus-visible,
+.return-btn:focus-visible,
+.reset-btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* ===== Guidance and Pricing Cards ===== */
+
+.insight-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+}
+
+.insight-card h3 {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin: 0 0 12px;
+}
+
+.insight-card p {
+    margin: 8px 0;
+}
+
+.insight-note {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===== Pricing Layout ===== */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pricing-grid > div {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.price-figure {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.full-width-note {
+    grid-column: 1 / -1;
+}
+
+/* ===== Order Receipt ===== */
+
+.receipt-card {
+    background-color: var(--surface);
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin: 20px 0;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 2;
+    box-shadow: 0 6px 18px rgba(52, 37, 29, 0.06);
+}
+
+.receipt-heading {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+}
+
+.receipt-heading h3 {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.receipt-heading p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 4px 0 0;
+}
+
+.receipt-details {
+    line-height: 2;
+}
+
+/* ===== Responsive Receipt ===== */
+
+@media (max-width: 600px) {
+    .receipt-card {
+        padding: 18px;
+        font-size: 1rem;
+    }
+}
+
+/* ===== Responsive Pricing ===== */
+
+@media (max-width: 600px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .submit-btn,
+    .return-btn,
+    .reset-btn {
+        transition: none;
+    }
+}
+
