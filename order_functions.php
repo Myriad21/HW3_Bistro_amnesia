@@ -163,5 +163,4 @@
     function drinkSizeSelected(string $drinkSize): string {
         return ($_SESSION['drinkSize'] ?? '') === $drinkSize ? 'checked' : '';
     }
-
 ?>
