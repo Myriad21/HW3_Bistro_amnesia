@@ -34,18 +34,6 @@
 
         </section>
 
-        <section class="insight-card" aria-labelledby="feedback-heading">
-            <h3 id="feedback-heading">Order Feedback</h3>
-
-            <p>
-                <?= htmlspecialchars(completionMessage()); ?>
-            </p>
-
-            <p class="insight-note">
-                <?= htmlspecialchars(pairingSuggestion()); ?>
-            </p>
-        </section>
-
         <section class="insight-card pricing-grid" aria-label="Order pricing information">
 
             <div>
@@ -64,6 +52,18 @@
 
             <p class="insight-note full-width-note">
                 <?= htmlspecialchars(pricingNote()); ?>
+            </p>
+        </section>
+
+        <section class="insight-card" aria-labelledby="feedback-heading">
+            <h3 id="feedback-heading">Order Feedback</h3>
+
+            <p>
+                <?= htmlspecialchars(completionMessage()); ?>
+            </p>
+
+            <p class="insight-note">
+                <?= htmlspecialchars(pairingSuggestion()); ?>
             </p>
         </section>
 

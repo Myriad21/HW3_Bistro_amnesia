@@ -285,6 +285,30 @@ fieldset.form-group input[type="radio"]:focus-visible {
     line-height: 2;
 }
 
+/* ===== Receipt Detail Rows ===== */
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+.receipt-row:last-child {
+    border-bottom: none;
+}
+
+.receipt-row span {
+    color: var(--muted);
+}
+
+.receipt-row strong {
+    color: var(--text);
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
 /* ===== Responsive Receipt ===== */
 
 @media (max-width: 600px) {

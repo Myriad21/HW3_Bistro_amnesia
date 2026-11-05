@@ -17,9 +17,21 @@
             ? $drinkSize
             : '(not selected)';
 
-        return "Dessert: {$_SESSION['dessert']}<br>"
-            . "Drink: {$_SESSION['drink']}<br>"
-            . "Drink size: {$_SESSION['drinkSize']}";
+        return
+            '<div class="receipt-row">' .
+                '<span>Dessert</span>' .
+                '<strong>' . htmlspecialchars($_SESSION['dessert']) . '</strong>' .
+            '</div>' .
+
+            '<div class="receipt-row">' .
+                '<span>Drink</span>' .
+                '<strong>' . htmlspecialchars($_SESSION['drink']) . '</strong>' .
+            '</div>' .
+
+            '<div class="receipt-row">' .
+                '<span>Drink size</span>' .
+                '<strong>' . htmlspecialchars($_SESSION['drinkSize']) . '</strong>' .
+            '</div>';
     }
 
     function sessionValue(string $key): string {
