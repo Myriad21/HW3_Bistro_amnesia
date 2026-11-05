@@ -1,24 +1,69 @@
 <?php
-require "./order_functions.php";
-$orderSummary = order();
+    require_once './order_functions.php';
+    $orderSummary = order();
 ?>
 
-<div class="receipt-card"><?= $orderSummary; ?></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chez Session | Order Receipt</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-<div class="insight-card">
-   <h3>Order feedback</h3>
-   <p><?= htmlspecialchars(completionMessage()); ?></p>
-   <p class="insight-note"><?= htmlspecialchars(pairingSuggestion()); ?></p>
-</div>
+    <header>
+        <h1>Chez Session</h1>
+        <p>Your order has been sent to the kitchen!</p>
+    </header>
 
-<div class="insight-card pricing-grid">
-   <div>
-      <h3>Estimated total</h3>
-      <p class="price-figure"><?= htmlspecialchars(formattedTotal()); ?></p>
-   </div>
-   <div>
-      <h3>Order profile</h3>
-      <p><?= htmlspecialchars(orderProfile()); ?></p>
-   </div>
-   <p class="insight-note full-width-note"><?= htmlspecialchars(pricingNote()); ?></p>
-</div>
+    <main>
+        <h2>Your Receipt</h2>
+
+        <section class="receipt-card" aria-label="Order summary">
+            <?= $orderSummary; ?>
+        </section>
+
+        <section class="insight-card" aria-labelledby="feedback-heading">
+            <h3 id="feedback-heading">Order Feedback</h3>
+
+            <p>
+                <?= htmlspecialchars(completionMessage()); ?>
+            </p>
+
+            <p class="insight-note">
+                <?= htmlspecialchars(pairingSuggestion()); ?>
+            </p>
+        </section>
+
+        <section class="insight-card pricing-grid" aria-label="Order pricing information">
+
+            <div>
+                <h3>Estimated Total</h3>
+                <p class="price-figure">
+                    <?= htmlspecialchars(formattedTotal()); ?>
+                </p>
+            </div>
+
+            <div>
+                <h3>Order Profile</h3>
+                <p>
+                    <?= htmlspecialchars(orderProfile()); ?>
+                </p>
+            </div>
+
+            <p class="insight-note full-width-note">
+                <?= htmlspecialchars(pricingNote()); ?>
+            </p>
+        </section>
+
+        <div class="form-actions">
+            <a href="index.php" class="return-btn">
+                Order Again 🔄
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>

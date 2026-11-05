@@ -89,6 +89,7 @@ require_once './order_functions.php';
             </a>
         </div>
 
+        <!--Pairing Recommendations-->
         <section class="insight-card" aria-labelledby="guidance-heading">
             <h3 id="guidance-heading">Live Guidance</h3>
 
@@ -101,6 +102,7 @@ require_once './order_functions.php';
             </p>
         </section>
 
+        <!--Price estimation-->
         <section class="insight-card pricing-grid" aria-label="Order pricing information">
 
             <div>
