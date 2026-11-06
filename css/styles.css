@@ -44,6 +44,34 @@ header p {
     font-size: 1.05rem;
 }
 
+/* ===== Site Navigation ===== */
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 18px;
+}
+
+.site-nav a {
+    color: var(--muted);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 6px 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.site-nav a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
 main {
     width: min(100% - 40px, 1100px);
     margin: 40px auto;

@@ -15,6 +15,11 @@ require_once './order_functions.php';
     <header>
         <h1>Chez Session</h1>
         <p>Build your perfect dessert and drink combination.</p>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.php" aria-current="page">Order</a>
+            <a href="about.php">About</a>
+        </nav>
     </header>
 
     <main>
