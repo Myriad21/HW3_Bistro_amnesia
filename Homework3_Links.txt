@@ -1,0 +1,3 @@
+Live Website (Codd): https://codd.cs.gsu.edu/~tsmith413/WebDev/HW/hw3/index.php
+GitHub Repository: https://github.com/Myriad21/HW3_Bistro_amnesia 
+Course Homepage: https://codd.cs.gsu.edu/~tsmith413/WebDev/HW/hw1/index.html 
